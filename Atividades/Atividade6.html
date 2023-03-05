@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSTI-4SEM-LPAW-Aula 01 | CSS3 Animação: Exemplo 10</title>
+        <meta name="description" content="  ">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            div{
+                background-image: url('https://i.ibb.co/YWHGhYN/goblin_big.png');
+                background-size: 48px 73px;
+                width:16px;
+                height: 18px;
+                background-repeat: no-repeat;
+                background-clip: content-box;
+                background-position: 0px 0px;
+                animation-name: div-sprite;
+                animation-duration:1000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: step-end;
+            }
+            
+            @keyframes div-sprite{
+                 0%,100%{background-position: 0px 0px;transform: translateY(0px);}
+                 25%{background-position: -17px 0px;transform: translateY(2px);}
+                 50%{background-position: -33px 0px;transform: translateY(4px);}
+                 75%{background-position: -17px 0px;transform: translateY(8px);}
+            }
+            
+            img {
+                width: 150px;
+                height: 180px;
+                object-fit: none;
+                object-position: 40% 90%;
+                animation-name: img-sprite;
+                animation-duration:2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: step-end;
+              }
+              
+              @keyframes img-sprite{
+                  0%,100%{object-position: 0% 0%;transform: translateX(0px) translateY(0px);}
+                  8%{object-position: 50% 0%;transform: translateX(0px) translateY(50px);}
+                  16%{object-position: 100% 0%;transform: translateX(0px) translateY(100px);}
+                  
+                  24%{object-position: 0% 66%;transform: translateX(50px) translateY(100px);}
+                  32%{object-position: 50% 66%;transform: translateX(100px) translateY(100px);}
+                  40%{object-position: 100% 66%;transform: translateX(150px) translateY(100px);}
+                  
+                  48%{object-position: 0% 33%;transform: translateX(150px) translateY(100px);}
+                  56%{object-position: 50% 33%;transform: translateX(150px) translateY(50px);}
+                  64%{object-position: 100% 33%;transform: translateX(150px) translateY(0px);}
+
+                  72%{object-position: 0% 100%;transform: translateX(150px) translateY(0px);}
+                  80%{object-position: 50% 100%;transform: translateX(100px) translateY(0px);}
+                  88%{object-position: 100% 100%;transform: translateX(50px) translateY(0px);}
+              }
+        </style>
+    </head>
+    <body>
+        
+        <img src="img/goblin_big.png" alt="Globin">
+    </body>
+</html>
